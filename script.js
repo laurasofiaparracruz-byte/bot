@@ -1,17 +1,47 @@
 // Crear las listas de imágenes, títulos y frases
 const imagenes = [
-  "https://www.postposmo.com/wp-content/uploads/2020/09/Especies-end%C3%A9micas-de-colombia-3.jpg",
-  "https://www.postposmo.com/wp-content/uploads/2020/09/Especies-end%C3%A9micas-de-colombia-4.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Aries%2C_Blanco_y_Negro%2C_de_Arija%2C_05-03-1904_%28cropped%29.svg/330px-Aries%2C_Blanco_y_Negro%2C_de_Arija%2C_05-03-1904_%28cropped%29.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Tavro%2C_Arija%2C_Blanco_y_Negro%2C_16-04-1904.svg/330px-Tavro%2C_Arija%2C_Blanco_y_Negro%2C_16-04-1904.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Geminis%2C_Blanco_y_Negro%2C_de_Arija%2C_07-05-1904_%28cropped%29.svg/330px-Geminis%2C_Blanco_y_Negro%2C_de_Arija%2C_07-05-1904_%28cropped%29.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/C%C3%A1ncer%2C_Arija%2C_Blanco_y_Negro%2C_04-06-1904.svg/330px-C%C3%A1ncer%2C_Arija%2C_Blanco_y_Negro%2C_04-06-1904.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Leo%2C_Arija%2C_Blanco_y_Negro%2C_02-07-1904.svg/330px-Leo%2C_Arija%2C_Blanco_y_Negro%2C_02-07-1904.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Virgo%2C_Blanco_y_Negro%2C_de_Arija%2C_06-08-1904_%28cropped%29.svg/330px-Virgo%2C_Blanco_y_Negro%2C_de_Arija%2C_06-08-1904_%28cropped%29.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Libra%2C_Arija%2C_Blanco_y_Negro%2C_03-09-1904.svg/330px-Libra%2C_Arija%2C_Blanco_y_Negro%2C_03-09-1904.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Escorpio%2C_Blanco_y_Negro%2C_de_Arija%2C_01-10-1904_%28cropped%29.svg/330px-Escorpio%2C_Blanco_y_Negro%2C_de_Arija%2C_01-10-1904_%28cropped%29.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Sagitario%2C_Arija%2C_Blanco_y_Negro%2C_05-11-1904.svg/330px-Sagitario%2C_Arija%2C_Blanco_y_Negro%2C_05-11-1904.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Capricornio%2C_Arija%2C_Blanco_y_Negro%2C_01-10-1904.svg/330px-Capricornio%2C_Arija%2C_Blanco_y_Negro%2C_01-10-1904.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Acuario%2C_Blanco_y_Negro%2C_de_Arija%2C_02-01-1904_%28cropped%29.svg/330px-Acuario%2C_Blanco_y_Negro%2C_de_Arija%2C_02-01-1904_%28cropped%29.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Piscis%2C_Arija%2C_Blanco_y_Negro%2C_06-02-1904.svg/330px-Piscis%2C_Arija%2C_Blanco_y_Negro%2C_06-02-1904.svg.png",
 ];
 
 const titulos = [
-  "Tortuga morrocoy",
-  "Ranita venenosa",
+  "Aries",
+  "Tauro",
+  "Géminis",
+  "Cáncer",
+  "Leo",
+  "Virgo",
+  "Libra",
+  "Escorpio",
+  "Sagitario",
+  "Capricornio",
+  "Acuario",
+  "Piscis"
 ];
 
 const frases = [
-  "Te alimentas de plantas, frutas, hojas y flores. Vives en bosques de climas cálidos y prefieres la tierra que el agua.",
-  "Eres pequeña pero tu extravagancia no pasa desapercibida. Vives en bosques húmedos y lluviosos y tienes veneno en la piel.",
+  "Un Aries en tu vida te recordará que la paciencia no es su fuerte (ni lo será).",
+  "Un Tauro en tu vida te enseñará que el amor también se demuestra con comida.",
+  "Un Géminis en tu vida te confundirá… y te encantará confundirte.",
+  "Un Cáncer en tu vida te hará sentir amado… y ligeramente vigilado.",
+  "Un Leo en tu vida te recordará lo importante que eres… para su público imaginario.",
+  "Un Virgo en tu vida reorganizará tu caos, tus ideas y probablemente tu clóset.",
+  "Un Libra en tu vida convertirá cada decisión simple en una asamblea emocional.",
+  "Un Escorpio en tu vida sabrá todo de ti, incluso lo que no querías saber tú.",
+  "Un Sagitario en tu vida te llevará a lugares donde ni tu señal del celular llega.",
+  "Un Capricornio en tu vida te enseñará que el romance también se puede agendar.",
+  "Un Acuario en tu vida te hablará de teorías conspirativas y te hará creer en ellas.",
+  "Un Piscis en tu vida será un poema viviente… hasta que desaparezca sin explicación."
 ];
 
 // Trae los elementos del HTML que tienen ese id
@@ -26,20 +56,13 @@ function numeroRandom(min, max) {
 }
 
 function generarPrediccion() {
-  // Para elegir la misma posición en todas las listas, generar un solo número aleatorio
-  const indice = numeroRandom(0, frases.length); // 0, 1, 2, 3
+  const indice = numeroRandom(0, frases.length);
 
-  // Reemplaza el texto del elemento 'titulo' por un título de la lista de títulos elegido aleatoriamente
-  titulo.innerText = titulos[indice]; // Entre los [] se pasa el número aleatorio generado arriba
-
-  // Reemplaza la imagen del elemento 'imagen' por una elegida aleatoriamente
+  titulo.innerText = titulos[indice];
   imagen.src = imagenes[indice];
-
-  // Reemplaza el texto del elemento 'predicción' por las frases elegidas aleatoriamente
   prediccion.innerHTML = `<p>${frases[indice]}</p>`;
 }
 
-// Ejecuta la función generarPoema() cada vez que hago click en el botón
 boton.addEventListener("click", function () {
   generarPrediccion();
 });

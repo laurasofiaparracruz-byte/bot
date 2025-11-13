@@ -13,42 +13,53 @@ html,
 body {
   margin: 0;
   padding: 0;
-  
-  
-  /* Código para poner un cursor personalizado*/
- /* cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto; */
-
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f7f9;
+  color: #2b0034;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
 
 h2 {
   font-size: 1.1em;
 }
 
 #contenedor {
-  margin: auto 1em;
   text-align: center;
-
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(85, 3, 105, 0.2);
+  padding: 2em;
+  max-width: 400px;
+  width: 90%;
 }
 
 #tituloPagina {
-  margin-top: 1em;
-  margin-bottom: 0;
-  font-family: sans-serif;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  color: #550369;
 }
 
 #foto {
- height: 300px;
-  border: #ff7300 solid 5px;
+  height: 300px;
+  border: #550369 solid 5px;
   margin-top: 15px;
+  border-radius: 10px;
 }
 
 .tituloPrediccion {
-  font-size: 2em;
+  font-size: 1.8em;
+  margin-top: 0.5em;
+  color: #550369;
 }
 
 .prediccion {
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-bottom: 1.5em;
 }
 
 .prediccion::first-letter {
@@ -56,9 +67,30 @@ h2 {
 }
 
 #boton {
-  font-size: 0.9em;
-  background-color: #3d00fdb5;
-  color: white;
-  margin-bottom: 2em;
+  font-size: 1em;
+  background-color: #d52ff7b5;
+  color: rgb(23, 1, 41);
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  animation: fadeIn 0.8s ease; /* 🔮 Solo el botón tiene animación */
+}
+
+#boton:hover {
+  background-color: #c21eeeb5;
+  transform: scale(1.05);
+}
+
+/* Animación solo para el botón */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
